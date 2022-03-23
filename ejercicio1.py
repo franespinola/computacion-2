@@ -19,7 +19,7 @@ argv=sys.argv[1:]
 opt,arg=getopt.getopt(argv,'o:m:n:')                   #argv=lista de argumento a analizar, la ponemos en 1 ya que en la posicion 0 es el nombre de nuestro archivo
 
 print(opt)
-print(arg)
+
 
 
 for op,arg in opt:
