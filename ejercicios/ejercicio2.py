@@ -16,14 +16,15 @@ def main():
 
 
     if os.path.isfile(file1):
-        with open(file1,'rw') as file:
-            file.write(file2)
-        exit()
+        with open(file1,'r') as file:
+            f=file.read()
+        with open(file2,'w+') as output:
+            output.write(f)
+        file.close()
+        output.close()
+        
     else:
-        archivo_texto= open(file1,"w")
-        archivo_texto.write(file2)
-        archivo_texto.close()
-    #print(texto)
+        print("el archivo no existe")
 
 '''
 archivo_texto= open(file1,"w")
