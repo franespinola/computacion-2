@@ -28,13 +28,12 @@ def main():
         procesos=os.fork()
         if procesos==0:
             if verbose:
-                print("iniciando proceso")    
+                print("iniciando proceso ",os.getpid())    
             sumapares()
-            if verbose:
-                print("finalizando proceso")
             os._exit(0)
-    os.wait()
-
+        var,status=os.wait()
+        if verbose and status==0:
+            print("proceso finalizado ",var)        
 
 if __name__=="__main__":
     main()
