@@ -16,8 +16,8 @@ def main():
     parser.add_argument("-v", "--verbose", help="modo de texto visible",action="store_true")
     args = parser.parse_args()
 
-    file = open(args.path, "w")
-    numero1=args.numero1
+    file = open(args.path, "w")            ##with open(args.path,'w+') as file:
+    numero1=args.numero1                        #for i in range(numero1):
     rec=args.recursive
     verbose=args.verbose
     
@@ -37,7 +37,7 @@ def main():
     
 
     text=open(args.path, "r")
-    for letter in text.readlines():
+    for letter in text.readlines():     #readlines()devuelve cada linea escrita en el archivo como una lista
         print(letter)
     text.close()
 
