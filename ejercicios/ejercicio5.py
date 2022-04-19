@@ -33,7 +33,9 @@ def main():
             print(f"{child_line[::-1].strip()}")
             r.close()
 
-main()
+if __name__ == "__main__":
+    main()
+
 
    
 
