@@ -32,7 +32,7 @@ def escritor(w,q):
 def lector(r,q):
     sys.stdin = open(0)
     std = sys.stdin.readline()
-    r.send(std)
+    r.send(std) #envia lo del pipe
     r.close()
     print(f"texto encriptado:{q.get()}")
 
