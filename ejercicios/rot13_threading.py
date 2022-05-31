@@ -1,6 +1,7 @@
-from multiprocessing import Queue
-#from queue import Queue
+
+import queue
 import sys,threading,codecs
+
 
 
 def thread_function1(queue1,queue2):
@@ -27,8 +28,8 @@ def Rot_13(line):
     return line_codec
 
 if __name__ == '__main__':
-    q1 = Queue()
-    q2 = Queue()
+    q1 = queue.Queue()
+    q2 = queue.Queue()
     t1 = threading.Thread(target = thread_function1,args=(q1,q2), daemon = True)    
     #t1.join()
     t2 = threading.Thread(target = thread_function2,args=(q1,q2), daemon = True)
